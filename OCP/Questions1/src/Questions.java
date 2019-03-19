@@ -8,32 +8,32 @@ import java.util.function.BiFunction;
 public class Questions {
 
     public static void main(String[] args) {
-        Questions questions = new Questions();
-        questions.q1();
-       // questions.q2();
-        questions.q3();
-        questions.q4();
+
+        q1();
+        q2();
+        q3();
+        q4();
        // questions.wait(); // throws IllegalMonitorStateException and InterruptedException
 
 
     }
 
-    public void q1() {
+    public static void q1() {
         TestClass.q1();
 
     }
 
-    /*public void q2(){
+    public static void q2(){
         List<Item> l = Arrays.asList(
                 new Item(1, "Screw"),
                 new Item(2, "Nail"),
                 new Item(3, "Bolt")
         );
 
-       // l.stream().forEach(System.out::print);
+       l.stream().forEach(System.out::print);
     }
-*/
-    public void q3(){
+
+    public static void q3(){
 
         AtomicInteger ai = new AtomicInteger(5);
         int x = ai.getAndSet(6);
@@ -43,7 +43,7 @@ public class Questions {
 
     }
 
-    public void q4(){
+    public static void q4(){
         Map<String, Account> myAccts = new HashMap<>();
         myAccts.put("111", new Account("111"));
         myAccts.put("222", new BankAccount("111", 200.0));
@@ -56,7 +56,7 @@ public class Questions {
         System.out.println(ba.getBalance());
     }
 
-    public void q5() {
+    public static void q5() {
         List<Movie> movies = Arrays.asList(
                 new Movie("Titanic", Movie.Genre.DRAMA, 'U'),
                 new Movie("Psycho", Movie.Genre.THRILLER, 'U'),
@@ -141,9 +141,6 @@ class Account {
 }
 
 
-
-
-//imports not shown
 class Movie{
     static enum Genre  {DRAMA, THRILLER, HORROR, ACTION };
     private Genre genre;
